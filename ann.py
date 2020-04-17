@@ -18,7 +18,7 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder_x1 = LabelEncoder()
 X[:, 1] = labelencoder_x1.fit_transform(X[:, 1])
 labelencoder_x2 = LabelEncoder()
-X[:, 2] = labelencoder_x1.fit_transform(X[:, 2])
+X[:, 2] = labelencoder_x2.fit_transform(X[:, 2])
 onehotencoder = OneHotEncoder(categorical_features=[1])
 X = onehotencoder.fit_transform(X).toarray()
 #Deleting 1st column here to avoid dummy variable trap
